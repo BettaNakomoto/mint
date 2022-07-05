@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+BettaMinter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo contains all the files needed to implement the BettaMinter Front End Design using React + CSS and Bootstrap.
 
-## Available Scripts
+** USE AT YOUR OWN RISK** **NOT RESPONSIBLE FOR ANY ISSUES!! **
 
-In the project directory, you can run:
+1.) Create your react app
 
-### `npm start`
+npx create-react-app "bettaminter"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2.) Open project folder
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://github.com/ABettaMeta/BettaMinter.git
 
-### `npm test`
+3.) Install Dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm i bootstrap@5.2.0-beta1
 
-### `npm run build`
+npm i react-bootstrap
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm i sf-font
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm i web3modal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm i @walletconnect/web3-provider
 
-### `npm run eject`
+npm i walletlink
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm i web3
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm i axios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm i ethers axios @nextui-org/react
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.) Fix Webpack limitation for Web3js:
 
-## Learn More
+npm uninstall webpack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+update "react-scripts" from 5.0.0 to 4.0.3 (or version < 5.0.0) in package.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+delete package-lock.json
 
-### Code Splitting
+npm install webpack@4.44.2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm install
 
-### Analyzing the Bundle Size
+*https://www.youtube.com/watch?v=IHrcFo1MX60 for help
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5.) Deploy your NFT smart contract
 
-### Making a Progressive Web App
+6.) Update config.js with all the correct information:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Your NFT Collection Smart Contract Address, Your BSCscan API Key, Your Moralis API Key, Your Alchemy API Key
 
-### Advanced Configuration
+*Replace any other information regarding the mainnet you are using accordingly. In App.js and nft.js replace infura provider ID's for web3Modal provider. Update to the mainnet you are using (if applicable).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+7.) Start your server
 
-### Deployment
+npm run start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Inspired by Net2Dev
